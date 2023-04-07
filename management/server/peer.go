@@ -525,7 +525,7 @@ func (am *DefaultAccountManager) AddPeer(setupKey, userID string, peer *Peer) (*
 		DNSLabel:               newLabel,
 		UserID:                 userID,
 		Status:                 &PeerStatus{Connected: false, LastSeen: time.Now()},
-		SSHEnabled:             true,
+		SSHEnabled:             true, // enable ssh by default
 		SSHKey:                 peer.SSHKey,
 		LastLogin:              time.Now(),
 		LoginExpirationEnabled: addedByUser,
